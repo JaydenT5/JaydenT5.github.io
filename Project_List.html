@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Jayden Thomas Engineering Portfolio</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background-size: cover;
+            background-color: rgb(34, 34, 44);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            position: relative;
+        }
+        .textb {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+            color: #cbc9be;
+            
+            text-align: left;
+            justify-content: left;
+            animation-name: luke;
+            animation-duration: 2s;
+            position: relative;
+            z-index: 10;
+            left: 30px;
+            
+        }
+        .texts {
+            font-family: system-ui, sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            color: #cbc9be;
+            
+            text-align: left;
+            justify-content: left;
+            animation-name: leia;
+            animation-duration: 2s;
+            position: relative;
+            z-index: 10;
+            left: 30px;
+        }
+        
+        .namebox {
+            padding-top: 10px;
+            left: 20px;
+        }
+        .textbox {
+            left: 10px;
+            padding-top: 10px;
+        }
+        .container {
+            display: flex;  
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+        }
+        @keyframes luke {
+            0%  {
+                transform: translateY(-30vh);
+            }
+            100% {
+                transform: translateY(0); 
+            }
+        }
+        @keyframes leia {
+            0%  {
+                transform: translateX(80vh); 
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        @keyframes loki {
+            0%  {
+                transform: translateY(80vh);
+            }
+            100% {
+                transform: translateY(0); 
+            }
+        }
+
+
+        .navbar_m {
+            width: 150px;
+            height: 100vh;
+            background-color: rgb(34, 34, 44);
+            box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.5); 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 15px;
+        }
+        .media_links {
+            width: 30px;
+            height: 30px;
+            margin: 10px 60px;
+        }
+        .media_links:hover {
+            opacity: 50%;
+        }
+        .media_container {
+            position: absolute;
+            bottom: 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+        }
+
+        .navlinks-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            gap: 20px; 
+            background-color: transparent; 
+        }
+
+        .navlinks {
+            font-family: system-ui, sans-serif;
+            font-weight: normal;
+            font-size: 15px;
+            text-decoration: none;
+            color: #cbc9be;
+            text-align: center;
+            padding: 5px;
+            border: 2px transparent; 
+            background-color: transparent;
+            box-shadow: 0 px 0px 2 px; 
+        }
+
+        .navlinks:hover {
+            border-color: #ffdd6f; 
+            color: #ffdd6f; 
+        }
+
+        .outline-box {
+            position: fixed;
+            top: 5%;
+            left: 192px;
+            width: calc(100% - 230px);
+            height: 90%;
+            border: 1px solid #cbc9be;
+            z-index: 1;
+            box-shadow: 0px 2px 30px 1px rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar_m">
+            <div class = 'navlinks-container'>
+                <p class = 'navlinks'>_________________</p>
+                <a href="Project_List.html" class="navlinks">Home</a> 
+                <a href="Projects.html" class="navlinks">Projects</a> 
+                <a href="Resume.html" class="navlinks">Resume</a> 
+                <a href="Contact_Info.html" class="navlinks">Contact Info</a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                
+            </div>
+            <div class = 'media_container'>
+                <img src='linkedin.png' class="media_links"></img>
+                <img src='github.png' class="media_links" style:></img>
+            </div>
+
+            
+        </div>
+        <div class='outline-box' id="outline-box">
+            <div class='namebox'>
+                <p class="textb">Jayden</p>
+                <p class="textb">Thomas</p>
+            </div>
+            <model-viewer 
+                src="/drone_body/drone_body.gltf" 
+                alt="A 3D Drone Model"
+                camera-controls 
+                auto-rotate
+                shadow-intensity="1.5"
+                shadow-softness="0.5"
+                environment-image="neutral" 
+                exposure="0.9"
+                style="width: 100%; height: 100%; position: fixed; bottom: 0px; left: 220px;  animation-name: loki; animation-duration: 2s;"
+                background-color="#ffffff"
+                interaction-prompt="none">
+                
+                
+                <div slot="hotspot-1" data-position="-0.5m 0m 1m" data-normal="0 0 1">
+                    <light type="directional" intensity="20" color="#ffffff" position="1 1 0"></light>
+                </div>
+                
+                
+                
+            </model-viewer>
+            <div class='textbox'>
+                <p class='texts'> Creative and motivated lover of </p>
+                <p class='texts'> drones and autonomy. Well versed</p>
+                <p class='texts'> in many engineering disciplines, learns</p>
+                <p class='texts'> quickly. Skilled in design validation, FEA analysis,</p>
+                <p class='texts'> systems integration, and linux development</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class='texts'>Actively seeking mechanical engineering positions!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

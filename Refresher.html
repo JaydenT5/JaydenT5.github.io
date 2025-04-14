@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<title>My website</title>
+	<script>
+		function reveal() {
+  			var reveals = document.querySelectorAll(".reveal");
+				for (var i = 0; i < reveals.length; i++) {
+   					 var windowHeight = window.innerHeight;
+    				var elementTop = reveals[i].getBoundingClientRect().top;
+    				var elementVisible = 220;
+				 if (elementTop < windowHeight - elementVisible) {
+      				reveals[i].classList.add("active");
+    } 			else {
+      				reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+		function bigImg(x) {
+  			x.style.height = "64px";
+  			x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "300px";
+  x.style.width = "32px";
+}
+
+	</script>
+	<style>
+		html {
+			height: 100%;
+			cursor: crosshair;
+		}
+		body {
+			height: 100%;
+			background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/519c2270779257.5bae709dac7d8.gif");
+			background-attachment: fixed;
+		}
+		.big {
+			font-size: 80px;
+			font-family: "Bebas Neue", sans-serif;
+  			font-weight: 400;
+  			font-style: normal;
+			color: #EEFEF6;
+			text-shadow: 2px 5px 5px rgba(47, 51, 49, 0.2);
+			animation-name: luke;
+			animation-duration: 4s;
+		}
+		.origami {
+			width: 100%;
+			font-size: 80px;
+			font-family: garamond;
+			color: #EEFEF6;
+			text-shadow: 2px 5px 5px rgba(47, 51, 49, 0.2);
+		}
+		@keyframes luke {
+			0% {transform: scale(0);}
+			100% {transform: scale(1);}
+		}
+		.small {
+			font-size: 20px;
+			color: white;
+			text-shadow: 2px 5px 5px rgba(47, 51, 49, 0.2);
+		}
+		.navbar {
+			
+			position: fixed;
+			width: 100%;
+			text-align: center;
+			font-family: Monaco;
+			font-size: 20px;
+			font-weight: 400;
+			color: white;
+			text-decoration: none;
+			padding: 10px;
+			animation-name: barzoom;
+  			animation-duration: 3s;
+	
+		}
+		.navlinks {
+			text-align: center;
+			font-family: "Bebas Neue", sans-serif;
+  			font-weight: 400;
+  			font-style: normal;
+			font-size: 20px;
+			font-weight: 500;
+			color: white;
+			text-decoration: none;
+			margin: auto;
+			
+			
+		}
+		.navlinks:hover{
+			opacity: 50%;
+			transition: 0.5s;
+		}
+		.navlinks:not(:hover){
+			opacity: 100%;
+			transition: 0.5s;
+		}
+		@keyframes barzoom {
+			0% {transform: rotateX(50deg); transform: rotateY(50deg);}
+			100% {transform: rotateX(0deg); transform: rotateY(0deg);}
+		}
+		.scroll1 {
+			width: 100%;
+			height:68%;
+			background-color: none;
+			box-shadow: (5px 5px 10px);
+		}
+		.scroll2 {
+			width: 100%;
+			height:100%;
+			box-shadow:(5px 5px 10px);
+		}
+		.reveal {
+			position: relative;
+			transform: translateY(150px);
+			opacity: 0%;
+			transition: 1s;
+		}
+		.reveal.active {
+			transform: translateY(0px);
+			opacity: 100%;
+		}
+		.intro {
+			margin: auto;
+			width: 30%;
+			height: 40%;
+			background-color: white;
+		}
+		.lines {
+			opacity: 100%;
+			margin: auto;
+			width: 38%;
+  			color: white;
+  			background-image: linear-gradient(white, white);
+  			background-size: 0% 0.05em;
+ 			background-position-y: 100%;
+ 			background-position-x: 0%;
+  			background-repeat: no-repeat;
+ 			transition: background-size 0.2s ease-in-out;
+  			
+}
+
+		.lines:hover {
+  				background-size: 100% 0.05em;
+}
+
+		.list1 {
+			opacity: 0%;
+			line-height: 0.5em;
+			font-size: 30px;
+			margin-left: 100px;
+			list-style-type: circle;
+			color: white;
+		}
+		.plus {
+			margin-left: 50px;
+			display: inline-block;
+		}
+		.plus:hover {
+			margin-left: 50px;
+			opacity: 50%;
+		}
+		.scroll-container{
+ 			overflow-y: hidden;
+ 			overflow-x: auto;
+  			white-space: nowrap;
+  			background: transparent;
+  			height: 73%;
+  			border-radius:15px;
+}
+
+		.gridscroll{
+  			display:inline-flex;
+  			margin: 0px 5px 0px 5px;
+  			border-radius: 20px;
+  			height: 100%;
+  		}
+  		#blate {
+  			margin: auto;
+ 			font-family: 'garamond';
+ 			color: white;
+  			border-collapse: collapse;
+  			width: 20%;
+  			height: 70%;
+}
+
+		#blate td, #customers th {
+  			border: 2px solid #ddd;
+  			padding: 8px;
+}
+
+		#blate tr { 
+			margin: auto;
+			font-size: 30px;
+		}
+
+
+		#blate th {
+  			padding-top: 12px;
+  			padding-bottom: 12px;
+  			text-align: left;
+  			background-color: none;
+  			}
+  		#blate tr:hover {opacity:75%;}
+
+  		
+  		.physpics {
+  			margin: auto;
+  			opacity: 50%;
+  			}
+  		.compic {
+  			opacity: 80%;
+  			position: absolute;
+  			margin-left: 177px;
+  			
+
+  		}
+  		.sticky {
+  			position: relative;
+  			margin-bottom: 20px;
+  		}
+  		.overlap1 {
+  		opacity: 100%;
+  		position: absolute;
+  		background-color: white;
+  		width: 55.3%;
+  		height: 66%;
+  		margin-left: 302px;
+  		margin-top: 188px;
+  		border-radius: 10px;
+  		filter: brightness(70%);
+  		}
+	</style>
+	
+</head>
+
+<body>
+<div class="navbar">
+		<a href="google.com" target="_break" class='navlinks'>Home</a> |
+		<a href="google.com" target="_break" class='navlinks'>Projects</a> |
+		<a href="google.com" target="_break" class='navlinks'>Resume</a> |
+		<a href="google.com" target="_break" class='navlinks'>Refrences</a> |
+		<a href="google.com" target="_break" class='navlinks'>Media Gallery</a> |
+		<a href="google.com" target="_break" class='navlinks'>Contact Information</a> |
+		<a href="google.com" target="_break" class='navlinks'>?</a>
+
+</div>
+<br>
+	<h1 class='big lines'><center>Jayden Thomas</center></h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<ol class='list1 reveal'>
+	<li>Lorem ipsum dolor sit amet</li><p onmouseover="txtappear(this)" onmouseout="txtgone(this)" class='plus'>+</p>
+	<li>consectetur adipiscing elit, sed do eiusmod</li><p class='plus'>+</p>
+	<li>tempor incididunt ut labore et dolore magna</li><p class='plus'>+</p>
+	<li>Ut enim ad minim veniam, quis nostrud exercitation</li><p class='plus'>+</p>
+</ol>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<h1 class='origami reveal'><center>My Origami Works</center></h1>
+<hr></hr>
+<div class='scroll-container'>
+	<div class='scroll1 reveal gridscroll'><center>
+		<img class ='gridscroll' src="file:///Users/jaydenthomas/Dropbox/Mac/Desktop/Jayden's%20Folder/Creativity:Music/Photoshop/SatanStand.jpg">
+		<img class ='gridscroll' src="file:///Users/jaydenthomas/Dropbox/Mac/Desktop/Jayden's%20Folder/Creativity:Music/Photoshop/DRAGOnorigami2.jpg">
+		<img class ='gridscroll' src="file:///Users/jaydenthomas/Dropbox/Mac/Desktop/Jayden's%20Folder/Creativity:Music/Photoshop/dwarf1.jpg">
+	</center></div>
+</div>
+<hr></hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<h1 class='origami reveal lines1'><center>Sophomore Year Grades</center></h1>
+<br>
+<br>
+<div class='scroll2 reveal'><center>
+<img class="physpics" src="https://www.physicsforums.com/attachments/upload_2015-5-20_2-14-30-png.83647/">
+	<table id ="blate">
+  <tr>
+    <th>Class</th>
+    <th>Grade</th>
+  </tr>
+  <tr>
+    <td>MEEG210</td>
+    <td>97.43%</td>
+  </tr>
+  <tr>
+    <td>MEEG241</td>
+    <td>94.33%</td>
+  </tr>
+  <tr>
+    <td>MSEG201</td>
+    <td>93.67%</td>
+  </tr>
+  <tr>
+    <td>MATH351</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>PHYS245</td>
+    <td>N/A</td>
+  </tr>
+</table>
+</center></div>
+<br>
+<br>
+<h1 class='origami reveal lines1'><center>Past Coding Works</center></h1>
+<hr class='sticky'></hr>
+<div>
+
+		<img class='compic' src="file:///Users/jaydenthomas/Dropbox/Mac/Desktop/Jayden's%20Folder/Creativity:Music/Photoshop/iframcomputer.png">
+
+<iframe src="file:///Users/jaydenthomas/Desktop/Jayden's%20Folder/Creativity:Music/Programing:Coding/Index.html" class="overlap1"><center> 
+</center></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Jayden Thomas Engineering Portfolio</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background-size: cover;
+            background-color: rgb(34, 34, 44);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            position: relative;
+        }
+        .container {
+            display: flex;  
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+        }
+        .navbar_m {
+            width: 150px;
+            height: 100vh;
+            background-color: rgb(34, 34, 44);
+            box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.5); 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 15px;
+        }
+        .media_links {
+            width: 30px;
+            height: 30px;
+            margin: 10px 60px;
+        }
+        .media_container {
+            position: absolute;
+            bottom: 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .scroll-container {
+            height: 90%;
+            width: 100vw; 
+            position: fixed;
+            top: 35%;
+            left: 165px;
+            overflow-y: auto;
+            background: transparent;
+            border-radius: 15px;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        .model-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 50px; 
+        }
+
+        .model-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            gap: 15px; 
+            animation-name: loki;
+            animation-duration: 2s;
+        }
+
+        .gridscroll {
+            width: 300px;
+            height: 300px; 
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgb(0, 0, 0);
+            background-color: rgb(34, 34, 44);
+        }
+        .textscroll {
+            font-family: system-ui, sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            color: #cbc9be;
+            text-align: center; 
+            animation-name: loki;
+            animation-duration: 2s;
+        }
+
+        .navlinks-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            gap: 20px; 
+            background-color: transparent; 
+        }
+        .namebox {
+            padding-top: 10px;
+            left: 20px;
+        }
+        .textb {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+            color: #cbc9be;
+            
+            text-align: left;
+            justify-content: left;
+            animation-name: luke;
+            animation-duration: 2s;
+            position: relative;
+            z-index: 10;
+            left: 30px;
+            
+        }
+        .texts {
+            font-family: system-ui, sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            color: #cbc9be;
+            
+            text-align: left;
+            justify-content: left;
+            animation-name: leia;
+            animation-duration: 2s;
+            position: relative;
+            z-index: 10;
+            left: 30px;
+        }
+        .textbox {
+            left: 10px;
+            padding-top: 10px;
+        }
+
+        .navlinks {
+            font-family: system-ui, sans-serif;
+            font-weight: normal;
+            font-size: 15px;
+            text-decoration: none;
+            color: #cbc9be;
+            text-align: center;
+            padding: 5px;
+            border: 2px transparent; 
+            background-color: transparent;
+        }
+
+        .outline-box {
+            position: fixed;
+            top: 5%;
+            left: 192px;
+            width: calc(100% - 230px);
+            height: 90%;
+            border: 1px solid #cbc9be;
+            z-index: 1;
+            box-shadow: 0px 2px 30px 1px rgb(0, 0, 0);
+        }
+        @keyframes luke {
+            0%  {
+                transform: translateY(-30vh);
+            }
+            100% {
+                transform: translateY(0); 
+            }
+        }
+        @keyframes loki {
+            0%  {
+                transform: translateY(80vh);
+            }
+            100% {
+                transform: translateY(0); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar_m">
+            <div class='navlinks-container'>
+                <p class='navlinks'>_________________</p>
+                <a href="Project_List.html" class="navlinks">Home</a> 
+                <a href="Projects.html" class="navlinks">Projects</a> 
+                <a href="Resume.html" class="navlinks">Resume</a> 
+                <a href="Contact_Info.html" class="navlinks">Contact Info</a>
+            </div>
+            <div class='media_container'>
+                <img src='linkedin.png' class="media_links"></img>
+                <img src='github.png' class="media_links"></img>
+            </div>
+        </div>
+        <div class='outline-box' id="outline-box">
+            <div class='namebox'>
+                <p class="textb">Project</p>
+                <p class="textb">Gallery</p>
+            </div>
+
+        <div class='scroll-container'>
+            <div class='model-wrapper'>
+               
+                <div class='model-container'>
+                    <div class='textscroll'>Rotary Table</div>
+                    <model-viewer class='gridscroll'
+                        src="/rotary_table_updated_(1)/rotary_table_updated_(1).gltf" 
+                        alt="A 3D Model of a Rotary Table"
+                        camera-controls 
+                        auto-rotate
+                        shadow-intensity="1.5"
+                        shadow-softness="0.5"
+                        environment-image="neutral" 
+                        exposure="0.9">
+                    </model-viewer>
+                </div>
+
+             
+                <div class='model-container'>
+                    <div class='textscroll'>Drone Body</div>
+                    <model-viewer class='gridscroll'
+                        src="/drone_body/drone_body.gltf" 
+                        alt="A 3D Model of a Drone Body"
+                        camera-controls 
+                        auto-rotate
+                        shadow-intensity="1.5"
+                        shadow-softness="0.5"
+                        environment-image="neutral" 
+                        exposure="0.9">
+                    </model-viewer>
+                </div>
+
+                
+                <div class='model-container'>
+                    <div class='textscroll'>Another Drone Model</div>
+                    <model-viewer class='gridscroll'
+                        src="/drone_body/drone_body.gltf" 
+                        alt="A 3D Model of Another Drone"
+                        camera-controls 
+                        auto-rotate
+                        shadow-intensity="1.5"
+                        shadow-softness="0.5"
+                        environment-image="neutral" 
+                        exposure="0.9">
+                    </model-viewer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
